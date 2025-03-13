@@ -8,7 +8,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import path from 'path';
 import type { Compiler, Configuration } from 'webpack';
 import {
-  ContextReplacementPlugin,
+  ContextReplacementPlugin, 
   DefinePlugin,
   EnvironmentPlugin,
   NormalModuleReplacementPlugin,
@@ -26,6 +26,7 @@ const {
 } = process.env;
 
 dotenv.config();
+console.log(process.env.BASE_URL,"^^^^^^^^^^^^^^^^^^")
 
 const DEFAULT_APP_TITLE = `Telegram${APP_ENV !== 'production' ? ' Beta' : ''}`;
 

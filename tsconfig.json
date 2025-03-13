@@ -10,6 +10,7 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
+    "sourceMap": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
@@ -29,5 +30,6 @@
     "webpack.config.ts",
     "webpack-electron.config.ts",
     "babel.config.js",
-  ]
+  ],
+
 }

@@ -2270,6 +2270,7 @@ function blitBuffer (src, dst, offset, length) {
 // ArrayBuffer or Uint8Array objects from other contexts (i.e. iframes) do not pass
 // the `instanceof` check but they should be treated as of that type.
 // See: https://github.com/feross/buffer/issues/166
+
 function isInstance (obj, type) {
   return obj instanceof type ||
     (obj != null && obj.constructor != null && obj.constructor.name != null &&

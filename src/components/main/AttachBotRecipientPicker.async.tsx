@@ -14,7 +14,8 @@ const AttachBotRecipientPickerAsync: FC<OwnProps> = (props) => {
   );
 
   // eslint-disable-next-line react/jsx-props-no-spreading
-  return AttachBotRecipientPicker ? <AttachBotRecipientPicker {...props} /> : undefined;
+  return AttachBotRecipientPicker ? <AttachBotRecipientPicker {...props} /> 
+  : undefined;
 };
 
 export default AttachBotRecipientPickerAsync;

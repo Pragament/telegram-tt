@@ -146,6 +146,7 @@ export function createWindow(url?: string) {
 }
 
 function loadWindowUrl(window: BrowserWindow, url?: string, hash?: string): void {
+  console.log(hash,"*****")
   if (url && checkIsWebContentsUrlAllowed(url)) {
     window.loadURL(url);
   } else if (!app.isPackaged) {

@@ -1,17 +1,24 @@
 @use "sass:color";
 
 @function toRGB($color) {
-  @return color.red($color) + ", " + color.green($color) + ", " + color.blue($color);
+  @return color.channel($color, "red", $space: rgb) + ", "
+  + color.channel($color, "green", $space: rgb) + ", "
+  + color.channel($color, "blue", $space: rgb);
+
 }
 
 @function blend-normal($foreground, $background) {
-  $opacity: opacity($foreground);
-  $background-opacity: opacity($background);
+  $opacity: color.opacity($foreground);
+  $background-opacity: color.opacity($background);
 
   // calculate opacity
-  $bm-red: color.red($foreground) * $opacity + color.red($background) * $background-opacity * (1 - $opacity);
-  $bm-green: color.green($foreground) * $opacity + color.green($background) * $background-opacity * (1 - $opacity);
-  $bm-blue: color.blue($foreground) * $opacity + color.blue($background) * $background-opacity * (1 - $opacity);
+  $bm-red: color.channel($foreground, "red", $space: rgb) * $opacity 
+       + color.channel($background, "red", $space: rgb) * $background-opacity * (1 - $opacity);
+  $bm-green: color.channel($foreground, "green", $space: rgb) * $opacity 
+       + color.channel($background, "green", $space: rgb) * $background-opacity * (1 - $opacity);
+  $bm-blue: color.channel($foreground, "blue", $space: rgb) * $opacity 
+       + color.channel($background, "blue", $space: rgb) * $background-opacity * (1 - $opacity);
+
 
   @return rgb($bm-red, $bm-green, $bm-blue);
 }
@@ -62,6 +69,84 @@ $color-message-story-mention-from: #4ef390;
 $color-message-story-mention-to: #74bcff;
 
 :root {
+  --z-modal-confirm: 10000;
+  --z-overlay-effects: 10001;
+  
+  --z-portal-menu: 10000;
+  --z-symbol-menu-modal: 5000;
+  --z-lock-screen: 3000;
+  --z-ui-loader-mask: 2000;
+  --z-notification: 1700;
+  --z-confetti: 1600;
+  --z-reaction-picker: 1200;
+  --z-story-viewer: 1150;
+  --z-reaction-interaction-effect: 1100;
+  --z-right-column: 900;
+  --z-right-column-menu: 950;
+  --z-header-menu: 990;
+  --z-header-menu-backdrop: 980;
+  --z-modal: 1510;
+  --z-modal-menu: 1600;
+  --z-resize-grip: 1000;
+  --z-media-viewer: 1500;
+  --z-modal-low-priority: 1400;
+  --z-video-player-controls: 3;
+  --z-drop-area: 55;
+  --z-animation-fade: 50;
+  --z-menu-bubble: 21;
+  --z-menu-backdrop: 20;
+  --z-message-effect: 15;
+  --z-message-highlighted: 14;
+  --z-forum-panel: 13;
+  --z-message-context-menu: 13;
+  --z-scroll-down-button: 12;
+  --z-local-search: 12;
+  --z-left-header: 11;
+  --z-middle-header: 11;
+  --z-middle-footer: 11;
+  --z-story-ribbon: 10;
+  --z-country-code-input-group: 10;
+  --z-message-select-control: 9;
+  --z-message-select-area: 8;
+  --z-sticky-date: 9;
+  --z-register-add-avatar: 5;
+  --z-media-viewer-head: 3;
+  --z-symbol-menu-mobile: calc(var(--z-story-viewer) + 1);
+  --z-resize-handle: 2;
+  --z-below: -1;
+  --z-chat-ripple: 6;
+  --z-chat-float-button: calc(var(--z-chat-ripple) + 1);
+
+  --spinner-white-data: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEwLjggMjIuNEM2IDIxLjkgMi4xIDE4IDEuNiAxMy4yLjkgNy4xIDUuNCAxLjkgMTEuMyAxLjVjLjQgMCAuNy0uMy43LS43IDAtLjQtLjQtLjgtLjgtLjhDNC44LjQtLjIgNS45IDAgMTIuNS4yIDE4LjYgNS40IDIzLjggMTEuNSAyNGM2LjYuMiAxMi00LjggMTIuNC0xMS4yIDAtLjQtLjMtLjgtLjgtLjgtLjQgMC0uNy4zLS43LjctLjMgNS45LTUuNSAxMC40LTExLjYgOS43eiIgZmlsbD0iI2ZmZmZmZiIvPjwvc3ZnPg==);
+  --spinner-white-thin-data: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTEyIDIzQzUuOSAyMyAxIDE4LjEgMSAxMlM1LjkgMSAxMiAxVjBDNS40IDAgMCA1LjQgMCAxMnM1LjQgMTIgMTIgMTIgMTItNS40IDEyLTEyaC0xYzAgNi4xLTQuOSAxMS0xMSAxMXoiLz48L3N2Zz4=);
+  --spinner-blue-data: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEwLjggMjIuNEM2IDIxLjkgMi4xIDE4IDEuNiAxMy4yLjkgNy4xIDUuNCAxLjkgMTEuMyAxLjVjLjQgMCAuNy0uMy43LS43IDAtLjQtLjQtLjgtLjgtLjhDNC44LjQtLjIgNS45IDAgMTIuNS4yIDE4LjYgNS40IDIzLjggMTEuNSAyNGM2LjYuMiAxMi00LjggMTIuNC0xMS4yIDAtLjQtLjMtLjgtLjgtLjgtLjQgMC0uNy4zLS43LjctLjMgNS45LTUuNSAxMC40LTExLjYgOS43eiIgZmlsbD0iIzRlYTRmNiIvPjwvc3ZnPg==);
+  --spinner-dark-blue-data: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEwLjggMjIuNEM2IDIxLjkgMi4xIDE4IDEuNiAxMy4yLjkgNy4xIDUuNCAxLjkgMTEuMyAxLjVjLjQgMCAuNy0uMy43LS43IDAtLjQtLjQtLjgtLjgtLjhDNC44LjQtLjIgNS45IDAgMTIuNS4yIDE4LjYgNS40IDIzLjggMTEuNSAyNGM2LjYuMiAxMi00LjggMTIuNC0xMS4yIDAtLjQtLjMtLjgtLjgtLjgtLjQgMC0uNy4zLS43LjctLjMgNS45LTUuNSAxMC40LTExLjYgOS43eiIgZmlsbD0iIzgzNzhEQiIvPjwvc3ZnPg==);
+  --spinner-black-data: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEwLjggMjIuNEM2IDIxLjkgMi4xIDE4IDEuNiAxMy4yLjkgNy4xIDUuNCAxLjkgMTEuMyAxLjVjLjQgMCAuNy0uMy43LS43IDAtLjQtLjQtLjgtLjgtLjhDNC44LjQtLjIgNS45IDAgMTIuNS4yIDE4LjYgNS40IDIzLjggMTEuNSAyNGM2LjYuMiAxMi00LjggMTIuNC0xMS4yIDAtLjQtLjMtLjgtLjgtLjgtLjQgMC0uNy4zLS43LjctLjMgNS45LTUuNSAxMC40LTExLjYgOS43eiIgZmlsbD0iIzJlMzkzOSIvPjwvc3ZnPg==);
+  --spinner-green-data: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEwLjggMjIuNEM2IDIxLjkgMi4xIDE4IDEuNiAxMy4yLjkgNy4xIDUuNCAxLjkgMTEuMyAxLjVjLjQgMCAuNy0uMy43LS43IDAtLjQtLjQtLjgtLjgtLjhDNC44LjQtLjIgNS45IDAgMTIuNS4yIDE4LjYgNS40IDIzLjggMTEuNSAyNGM2LjYuMiAxMi00LjggMTIuNC0xMS4yIDAtLjQtLjMtLjgtLjgtLjgtLjQgMC0uNy4zLS43LjctLjMgNS45LTUuNSAxMC40LTExLjYgOS43eiIgZmlsbD0iIzRmYWU0ZSIvPjwvc3ZnPg==);
+  --spinner-gray-data: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEwLjggMjIuNEM2IDIxLjkgMi4xIDE4IDEuNiAxMy4yLjkgNy4xIDUuNCAxLjkgMTEuMyAxLjVjLjQgMCAuNy0uMy43LS43IDAtLjQtLjQtLjgtLjgtLjhDNC44LjQtLjIgNS45IDAgMTIuNS4yIDE4LjYgNS40IDIzLjggMTEuNSAyNGM2LjYuMiAxMi00LjggMTIuNC0xMS4yIDAtLjQtLjMtLjgtLjgtLjgtLjQgMC0uNy4zLS43LjctLjMgNS45LTUuNSAxMC40LTExLjYgOS43eiIgZmlsbD0iIzcwNzU3OSIvPjwvc3ZnPg==);
+  --spinner-yellow-data: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEwLjggMjIuNEM2IDIxLjkgMi4xIDE4IDEuNiAxMy4yLjkgNy4xIDUuNCAxLjkgMTEuMyAxLjVjLjQgMCAuNy0uMy43LS43IDAtLjQtLjQtLjgtLjgtLjhDNC44LjQtLjIgNS45IDAgMTIuNS4yIDE4LjYgNS40IDIzLjggMTEuNSAyNGM2LjYuMiAxMi00LjggMTIuNC0xMS4yIDAtLjQtLjMtLjgtLjgtLjgtLjQgMC0uNy4zLS43LjctLjMgNS45LTUuNSAxMC40LTExLjYgOS43eiIgZmlsbD0iI0ZERDc2NCIvPjwvc3ZnPg==);
+
+  --premium-gradient: linear-gradient(84.4deg, #6C93FF -4.85%, #976FFF 51.72%, #DF69D1 110.7%);
+
+  --layer-blackout-opacity: 0.1;
+
+  --layer-transition: 300ms cubic-bezier(0.33, 1, 0.68, 1);
+  --layer-transition-behind: 300ms cubic-bezier(0.33, 1, 0.68, 1);
+  --slide-transition: 300ms cubic-bezier(0.25, 1, 0.5, 1);
+  --select-transition: 200ms ease-out;
+
+  --safe-area-top: env(safe-area-inset-top);
+  --safe-area-right: env(safe-area-inset-right);
+  --safe-area-bottom: env(safe-area-inset-bottom);
+  --safe-area-left: env(safe-area-inset-left);
+
+  --picker-title-shift: 1rem;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+
+  --middle-header-panes-height: 0px;
   --color-background: #{$color-white};
   --color-background-compact-menu: #FFFFFFBB;
   --color-background-compact-menu-reactions: #FFFFFFEB;
@@ -236,52 +321,7 @@ $color-message-story-mention-to: #74bcff;
     --symbol-menu-height: 17.6875rem;
   }
 
-  --z-overlay-effects: 10001;
-  --z-modal-confirm: 10000;
-  --z-portal-menu: 10000;
-  --z-symbol-menu-modal: 5000;
-  --z-lock-screen: 3000;
-  --z-ui-loader-mask: 2000;
-  --z-notification: 1700;
-  --z-confetti: 1600;
-  --z-reaction-picker: 1200;
-  --z-story-viewer: 1150;
-  --z-reaction-interaction-effect: 1100;
-  --z-right-column: 900;
-  --z-right-column-menu: 950;
-  --z-header-menu: 990;
-  --z-header-menu-backdrop: 980;
-  --z-modal: 1510;
-  --z-modal-menu: 1600;
-  --z-resize-grip: 1000;
-  --z-media-viewer: 1500;
-  --z-modal-low-priority: 1400;
-  --z-video-player-controls: 3;
-  --z-drop-area: 55;
-  --z-animation-fade: 50;
-  --z-menu-bubble: 21;
-  --z-menu-backdrop: 20;
-  --z-message-effect: 15;
-  --z-message-highlighted: 14;
-  --z-forum-panel: 13;
-  --z-message-context-menu: 13;
-  --z-scroll-down-button: 12;
-  --z-local-search: 12;
-  --z-left-header: 11;
-  --z-middle-header: 11;
-  --z-middle-footer: 11;
-  --z-story-ribbon: 10;
-  --z-country-code-input-group: 10;
-  --z-message-select-control: 9;
-  --z-message-select-area: 8;
-  --z-sticky-date: 9;
-  --z-register-add-avatar: 5;
-  --z-media-viewer-head: 3;
-  --z-symbol-menu-mobile: calc(var(--z-story-viewer) + 1);
-  --z-resize-handle: 2;
-  --z-below: -1;
-  --z-chat-ripple: 6;
-  --z-chat-float-button: calc(var(--z-chat-ripple) + 1);
+  
 
   --spinner-white-data: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEwLjggMjIuNEM2IDIxLjkgMi4xIDE4IDEuNiAxMy4yLjkgNy4xIDUuNCAxLjkgMTEuMyAxLjVjLjQgMCAuNy0uMy43LS43IDAtLjQtLjQtLjgtLjgtLjhDNC44LjQtLjIgNS45IDAgMTIuNS4yIDE4LjYgNS40IDIzLjggMTEuNSAyNGM2LjYuMiAxMi00LjggMTIuNC0xMS4yIDAtLjQtLjMtLjgtLjgtLjgtLjQgMC0uNy4zLS43LjctLjMgNS45LTUuNSAxMC40LTExLjYgOS43eiIgZmlsbD0iI2ZmZmZmZiIvPjwvc3ZnPg==);
   --spinner-white-thin-data: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTEyIDIzQzUuOSAyMyAxIDE4LjEgMSAxMlM1LjkgMSAxMiAxVjBDNS40IDAgMCA1LjQgMCAxMnM1LjQgMTIgMTIgMTIgMTItNS40IDEyLTEyaC0xYzAgNi4xLTQuOSAxMS0xMSAxMXoiLz48L3N2Zz4=);

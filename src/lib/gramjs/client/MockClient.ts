@@ -147,8 +147,8 @@ class TelegramClient {
             return new Api.contacts.TopPeers({
                 categories: [new Api.TopPeerCategoryPeers({
                     category: new Api.TopPeerCategoryCorrespondents(),
-                    count: this.mockData.topPeers.length,
-                    peers: this.mockData.topPeers.map((id) => {
+                    count: this.mockData?.topPeers?.length,
+                    peers: this.mockData?.topPeers?.map((id) => {
                         return new Api.TopPeer({
                             peer: createMockedTypePeer(id, this.mockData),
                             rating: 100,

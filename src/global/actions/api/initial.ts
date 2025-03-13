@@ -39,7 +39,7 @@ import {
 
 addActionHandler('initApi', (global, actions): ActionReturnType => {
   const initialLocationHash = parseInitialLocationHash();
-
+console.log(initialLocationHash,"((((((((((((((((((((((((")
   const hasTestParam = window.location.search.includes('test') || initialLocationHash?.tgWebAuthTest === '1';
 
   void initApi(actions.apiUpdate, {

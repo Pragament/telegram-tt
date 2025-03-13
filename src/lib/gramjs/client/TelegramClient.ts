@@ -611,6 +611,7 @@ class TelegramClient {
 
                 if (this.session.dcId !== dcId && !sender._authenticated) {
                     // Prevent another connection from trying to export the auth key while we're doing it
+                    // eslint-disable-next-line no-undef
                     await navigator.locks.request('GRAMJS_AUTH_EXPORT', async () => {
                         this._log.info(`Exporting authorization for data center ${dc.ipAddress}`);
                         const auth = await this.invoke(new Api.auth.ExportAuthorization({ dcId }));

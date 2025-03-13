@@ -535,10 +535,17 @@ const Main = ({
   useBackgroundMode(handleBlur, handleFocus, !!IS_ELECTRON);
   useBeforeUnload(handleBlur);
   usePreventPinchZoomGesture(isMediaViewerOpen || isStoryViewerOpen);
-
+  console.log(window.location?.href?.includes("?leftpanel=1"),"window.location.pathname in main panel")
+  const [openLeftPanel,setOpenLeftPanel] = useState(false)
+useEffect(()=>{
+  if(window.location?.href?.includes("?leftpanel=1")){
+setOpenLeftPanel(true)
+}
+},[])
   return (
     <div ref={containerRef} id="Main" className={className}>
-      <LeftColumn ref={leftColumnRef} />
+     {openLeftPanel?<LeftColumn ref={leftColumnRef} />:"."}
+
       <MiddleColumn leftColumnRef={leftColumnRef} isMobile={isMobile} />
       <RightColumn isMobile={isMobile} />
       <MediaViewer isOpen={isMediaViewerOpen} />

@@ -75,6 +75,7 @@ const App: FC<StateProps> = ({
 
   // Prevent drop on elements that do not accept it
   useEffect(() => {
+    console.log(window.location?.href?.includes("?leftpanel=1"),"window.location.pathnam")
     const body = document.body;
     const handleDrag = (e: DragEvent) => {
       e.preventDefault();

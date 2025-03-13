@@ -12,12 +12,12 @@
 
   background-color: var(--pattern-color);
   max-width: 10rem;
-
+  box-shadow: 0 1px 2px var(--color-default-shadow);
   @media (max-width: 600px) {
     max-width: calc(90vw - 13rem);
   }
 
-  box-shadow: 0 1px 2px var(--color-default-shadow);
+
 }
 
 .message-content {
@@ -430,8 +430,9 @@
   }
 
   .message-subheader .forward-custom-shape-subheader {
-    @include subheader-styles();
     min-width: 8rem;
+    @include subheader-styles();
+   
     .message-title {
       color: white;
     }
@@ -596,25 +597,23 @@
       flex-direction: row-reverse;
       direction: ltr;
       gap: 0.5rem;
-
+      position: absolute;
+      left: 100%;
+      top: 0.125rem;
+      color: white;
       & > .message-title {
         @include subheader-styles();
-        top: 0.125rem;
-
-        position: absolute;
-        left: 100%;
-
+      
         .Message.own & {
           left: initial;
           right: 100%;
         }
 
-        color: white;
         .admin-title {
           color: white;
         }
       }
-
+    
       .Message.own & {
         flex-direction: row;
       }

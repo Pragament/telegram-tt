@@ -15,7 +15,7 @@ export function initApi(_onUpdate: OnApiUpdate, initialArgs: ApiInitialArgs, ini
   initUpdateEmitter(_onUpdate);
 
   if (initialLocalDb) updateFullLocalDb(initialLocalDb);
-
+ console.log(initialArgs,"***************") 
   initClient(initialArgs);
 }
 

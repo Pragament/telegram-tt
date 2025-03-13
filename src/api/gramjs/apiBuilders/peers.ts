@@ -26,7 +26,7 @@ export function buildApiPeerId(id: BigInt.BigInteger, type: 'user' | 'chat' | 'c
   if (type === 'channel') {
     // Simulates TDLib https://github.com/tdlib/td/blob/d7203eb719304866a7eb7033ef03d421459335b8/td/telegram/DialogId.cpp#L54
     // But using only string operations. Should be fine until channel ids reach 10^12
-    // Example: 12345678 -> -1000012345678
+    // Example: 12345678 -> -1000012345678  #-1001000000002
     return `-1${id.toString().padStart(CHANNEL_ID_LENGTH - 2, '0')}`;
   }
 

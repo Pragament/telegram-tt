@@ -1,0 +1,1811 @@
+/*!****************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/modals/stars/StarTopupOptionList.module.scss ***!
+  \****************************************************************************************************************************************************************************************************************************/
+.StarTopupOptionList-module__options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.StarTopupOptionList-module__option {
+  --_background-color: var(--color-background-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.125rem;
+  padding: 1rem;
+  border-radius: 0.625rem;
+  background-color: var(--_background-color);
+  transition: background-color 0.25s ease-out;
+  cursor: var(--custom-cursor, pointer);
+}
+.StarTopupOptionList-module__option:hover {
+  --_background-color: var(--color-background-secondary-accent);
+}
+
+.StarTopupOptionList-module__active {
+  --_background-color: var(--color-background-secondary-accent);
+}
+
+.StarTopupOptionList-module__wideOption {
+  grid-column: 1/-1;
+}
+
+.StarTopupOptionList-module__optionTop {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.StarTopupOptionList-module__stackedStars {
+  display: grid;
+  grid-auto-columns: 0.4375rem;
+  grid-auto-flow: column;
+  justify-items: end;
+}
+
+.StarTopupOptionList-module__stackedStar {
+  filter: drop-shadow(0.0625rem 0.0625rem 0 var(--_background-color)) drop-shadow(-0.0625rem 0.0625rem 0 var(--_background-color)) drop-shadow(0.0625rem -0.0625rem 0 var(--_background-color)) drop-shadow(-0.0625rem -0.0625rem 0 var(--_background-color));
+  transition: filter 0.25s ease-out;
+}
+
+.StarTopupOptionList-module__optionBottom {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.StarTopupOptionList-module__moreOptions {
+  grid-column: 1/-1;
+}
+
+.StarTopupOptionList-module__iconDown {
+  margin-inline-start: 0.25rem;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 450px) {
+  .StarTopupOptionList-module__optionTop {
+    font-size: 1rem;
+  }
+}
+/*!****************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/modals/stars/gift/StarsGiftModal.module.scss ***!
+  \****************************************************************************************************************************************************************************************************************************/
+.StarsGiftModal-module__root .modal-content {
+  padding: 0;
+}
+
+.StarsGiftModal-module__root .modal-dialog {
+  overflow: hidden;
+}
+
+.StarsGiftModal-module__main {
+  height: 100%;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.StarsGiftModal-module__headerInfo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.StarsGiftModal-module__logo {
+  margin: 1rem;
+  width: 6.25rem;
+  height: 6.25rem;
+  min-height: 6.25rem;
+}
+
+.StarsGiftModal-module__logoBackground {
+  position: absolute;
+  top: 0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 8rem;
+}
+
+.StarsGiftModal-module__description {
+  text-align: center;
+  margin-inline: 0.5rem;
+  margin-bottom: 1rem;
+  text-wrap: balance;
+}
+
+.StarsGiftModal-module__section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0.5rem;
+}
+
+.StarsGiftModal-module__header {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  border-bottom: 0.0625rem solid var(--color-borders);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 3.5rem;
+  padding: 0.5rem;
+  background: var(--color-background);
+  transition: 0.25s ease-out transform;
+}
+
+.StarsGiftModal-module__starHeaderText {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 0 0 0 3.5rem;
+  unicode-bidi: plaintext;
+}
+
+.StarsGiftModal-module__hiddenHeader {
+  transform: translateY(-100%);
+}
+
+.StarsGiftModal-module__closeButton {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 3;
+}
+
+.StarsGiftModal-module__avatar {
+  margin: 2rem;
+}
+
+.StarsGiftModal-module__center {
+  text-align: center;
+}
+
+.StarsGiftModal-module__secondaryInfo {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  padding: 1rem;
+  margin-top: auto;
+}
+
+@media (max-width: 450px) {
+  .StarsGiftModal-module__modalDialog .modal-dialog {
+    max-width: 100% !important;
+  }
+}
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/common/pickers/PickerModal.module.scss ***!
+  \**********************************************************************************************************************************************************************************************************************/
+.PickerModal-module__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.PickerModal-module__fixedHeight .PickerModal-module__content {
+  height: 90vh;
+}
+
+.PickerModal-module__withSearch .PickerModal-module__content {
+  padding: 0;
+}
+.PickerModal-module__withSearch .PickerModal-module__header {
+  margin-bottom: -0.75rem;
+}
+
+.PickerModal-module__header {
+  padding: 0.25rem !important;
+}
+
+.PickerModal-module__buttonWrapper {
+  padding: 0.25rem;
+}
+/*!********************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/main/premium/StarsGiftingPickerModal.module.scss ***!
+  \********************************************************************************************************************************************************************************************************************************/
+.StarsGiftingPickerModal-module__root {
+  z-index: calc(var(--z-modal-low-priority) + 1);
+}
+
+.StarsGiftingPickerModal-module__root .modal-content {
+  padding: 0;
+}
+
+.StarsGiftingPickerModal-module__root .modal-dialog {
+  max-width: 55vh;
+}
+
+.StarsGiftingPickerModal-module__root .modal-dialog,
+.StarsGiftingPickerModal-module__root .modal-content,
+.StarsGiftingPickerModal-module__transition {
+  overflow: hidden;
+}
+
+.StarsGiftingPickerModal-module__main {
+  height: 90vh;
+}
+
+.StarsGiftingPickerModal-module__filter {
+  padding: 0.375rem 1rem 0.25rem 0.75rem;
+  margin-bottom: 0.625rem;
+  background-color: var(--color-background);
+  box-shadow: inset 0 -0.0625rem 0 0 var(--color-background-secondary-accent);
+  border-bottom: 0.625rem solid var(--color-background-secondary);
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  flex-shrink: 0;
+  overflow-y: auto;
+  max-height: 20rem;
+}
+
+.StarsGiftingPickerModal-module__title {
+  margin: 0;
+}
+
+.StarsGiftingPickerModal-module__buttons {
+  width: 100%;
+  background: var(--color-background);
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  padding: 0.75rem;
+}
+
+.StarsGiftingPickerModal-module__picker {
+  height: 75vh;
+}
+
+.StarsGiftingPickerModal-module__avatars {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.StarsGiftingPickerModal-module__center {
+  text-align: center;
+}
+
+.StarsGiftingPickerModal-module__description,
+.StarsGiftingPickerModal-module__premiumFeatures {
+  text-align: center;
+  margin: 0 auto 2rem;
+  max-width: 25rem;
+}
+
+.StarsGiftingPickerModal-module__premiumFeatures {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+}
+
+.StarsGiftingPickerModal-module__options {
+  margin-bottom: 2.5rem;
+}
+
+.StarsGiftingPickerModal-module__button {
+  height: 3rem;
+  font-weight: 600;
+}
+/*!**************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/modals/stars/StarsBalanceModal.module.scss ***!
+  \**************************************************************************************************************************************************************************************************************************/
+.StarsBalanceModal-module__root {
+  z-index: calc(var(--z-modal-low-priority) + 1);
+}
+
+.StarsBalanceModal-module__root .modal-content {
+  padding: 0;
+}
+
+.StarsBalanceModal-module__root .modal-dialog {
+  height: min(55vh + 41px + 193px, 90vh);
+  max-width: 26.25rem;
+}
+
+.StarsBalanceModal-module__root .modal-dialog,
+.StarsBalanceModal-module__root .modal-content,
+.StarsBalanceModal-module__transition {
+  overflow: hidden;
+}
+
+.StarsBalanceModal-module__main {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.StarsBalanceModal-module__container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.StarsBalanceModal-module__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  position: relative;
+  padding-inline-end: calc(0.5rem - var(--scrollbar-width));
+  background-color: var(--color-background);
+  box-shadow: inset 0 -0.0625rem 0 0 var(--color-background-secondary-accent);
+  border-bottom: 0.625rem solid var(--color-background-secondary);
+}
+.StarsBalanceModal-module__section:last-child {
+  border-bottom: none;
+  box-shadow: none;
+}
+
+.StarsBalanceModal-module__sectionTitle {
+  color: var(--color-primary);
+  font-weight: 500;
+  font-size: 1rem;
+  align-self: flex-start;
+  padding: 0.25rem 0.75rem;
+}
+
+.StarsBalanceModal-module__tos {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  background-color: var(--color-background-secondary);
+  padding: 0.5rem 1rem;
+  padding-top: 0;
+}
+
+.StarsBalanceModal-module__logo {
+  margin: 1rem;
+  width: 6.25rem;
+  height: 6.25rem;
+  min-height: 6.25rem;
+}
+
+.StarsBalanceModal-module__logoBackground {
+  position: absolute;
+  top: 0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 8rem;
+}
+
+.StarsBalanceModal-module__headerHext {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  margin-inline: 0.5rem;
+}
+
+.StarsBalanceModal-module__description {
+  text-align: center;
+  margin-inline: 0.5rem;
+  margin-bottom: 1rem;
+  text-wrap: balance;
+  line-height: 1.375;
+}
+
+.StarsBalanceModal-module__header {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  border-bottom: 0.0625rem solid var(--color-borders);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 3.5rem;
+  padding: 0.5rem;
+  background: var(--color-background);
+  transition: 0.25s ease-out transform;
+}
+
+.StarsBalanceModal-module__starHeaderText {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 0 0 0 3rem;
+  unicode-bidi: plaintext;
+}
+
+.StarsBalanceModal-module__botItem {
+  margin-bottom: 0.75rem;
+}
+
+.StarsBalanceModal-module__hiddenHeader {
+  transform: translateY(-100%);
+}
+
+.StarsBalanceModal-module__closeButton {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 3;
+}
+
+.StarsBalanceModal-module__balance {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 1;
+}
+
+.StarsBalanceModal-module__smallerText {
+  font-size: 0.875rem;
+}
+
+.StarsBalanceModal-module__balanceBottom {
+  line-height: 1.5;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.StarsBalanceModal-module__modalBalance {
+  position: absolute;
+  top: 0.75rem;
+  right: 1.25rem;
+  z-index: 3;
+}
+
+.StarsBalanceModal-module__starButton {
+  grid-column: 1/-1;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.StarsBalanceModal-module__paymentContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.StarsBalanceModal-module__paymentImages {
+  display: grid;
+  grid-auto-columns: 3.5rem;
+  grid-auto-flow: column;
+  place-items: center;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.StarsBalanceModal-module__paymentPhoto {
+  outline: 0.25rem solid var(--color-background);
+  z-index: 1;
+}
+
+.StarsBalanceModal-module__avatarStar {
+  font-size: 2rem;
+  filter: drop-shadow(1px 1px 0 var(--color-background)) drop-shadow(-1px 1px 0 var(--color-background)) drop-shadow(1px -1px 0 var(--color-background)) drop-shadow(-1px -1px 0 var(--color-background));
+  position: absolute;
+  right: -1rem;
+  bottom: 0;
+  z-index: 1;
+}
+
+.StarsBalanceModal-module__paymentImageBackground {
+  height: 7rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.StarsBalanceModal-module__paymentButton {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.StarsBalanceModal-module__paymentButtonStar {
+  --color-fill: white !important;
+}
+
+.StarsBalanceModal-module__transactions, .StarsBalanceModal-module__subscriptions {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.StarsBalanceModal-module__tabs {
+  --border-radius-messages-small: 0;
+  top: 3.5rem;
+  padding-inline: 0;
+}
+
+.StarsBalanceModal-module__disclaimer {
+  margin-top: 0.5rem;
+  color: var(--color-text-secondary);
+}
+
+.StarsBalanceModal-module__amountBadge {
+  background-image: var(--stars-gradient);
+}
+
+.StarsBalanceModal-module__loadMore {
+  justify-content: flex-start;
+  gap: 0.75rem;
+}
+
+.StarsBalanceModal-module__loadMoreIcon {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  font-size: 1.5rem;
+}
+/*!*******************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/modals/stars/subscription/StarsSubscriptionItem.module.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************************/
+.StarsSubscriptionItem-module__root {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.25rem 0.75rem 0.25rem 0.25rem;
+  border-radius: 0.5rem;
+  cursor: var(--custom-cursor, pointer);
+  transition: background-color 0.25s ease-out;
+}
+.StarsSubscriptionItem-module__root:hover {
+  background-color: var(--color-chat-hover);
+}
+
+.StarsSubscriptionItem-module__info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.StarsSubscriptionItem-module__subtitle {
+  display: flex;
+  align-items: center;
+  gap: 0.125rem;
+  font-size: 0.875rem;
+}
+
+.StarsSubscriptionItem-module__status {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.StarsSubscriptionItem-module__statusPricing {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 0.25rem;
+}
+
+.StarsSubscriptionItem-module__amount {
+  font-weight: 500;
+}
+
+.StarsSubscriptionItem-module__title, .StarsSubscriptionItem-module__description, .StarsSubscriptionItem-module__subtitle {
+  margin-bottom: 0;
+}
+
+.StarsSubscriptionItem-module__title {
+  font-size: 1rem;
+}
+
+.StarsSubscriptionItem-module__description, .StarsSubscriptionItem-module__statusPeriod, .StarsSubscriptionItem-module__statusEnded {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.StarsSubscriptionItem-module__statusEnded {
+  color: var(--color-error);
+}
+
+.StarsSubscriptionItem-module__preview {
+  position: relative;
+  align-self: flex-start;
+}
+
+.StarsSubscriptionItem-module__subscriptionStar {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  filter: drop-shadow(1px 1px 0 var(--color-background)) drop-shadow(-1px 1px 0 var(--color-background)) drop-shadow(1px -1px 0 var(--color-background)) drop-shadow(-1px -1px 0 var(--color-background));
+}
+/*!***********************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/modals/stars/transaction/PaidMediaThumb.module.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************/
+.PaidMediaThumb-module__root {
+  display: grid;
+  grid-auto-columns: 0.5rem;
+  grid-auto-rows: 0.5rem;
+  place-items: center;
+  place-content: center;
+  height: 5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.PaidMediaThumb-module__preview {
+  height: 2.75rem;
+  width: 2.75rem;
+  grid-auto-columns: 0.25rem;
+  grid-auto-rows: 0.25rem;
+}
+
+.PaidMediaThumb-module__count {
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  font-size: 2rem;
+  line-height: 1;
+  color: white;
+}
+
+.PaidMediaThumb-module__thumb {
+  position: relative;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  outline: 0.25rem solid var(--color-background);
+}
+
+.PaidMediaThumb-module__preview .PaidMediaThumb-module__thumb {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 0.5rem;
+  outline-width: 0.125rem;
+}
+
+.PaidMediaThumb-module__noOutline {
+  outline: none;
+}
+
+.PaidMediaThumb-module__thumb:nth-child(1),
+.PaidMediaThumb-module__itemCount1 .PaidMediaThumb-module__count {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.PaidMediaThumb-module__thumb:nth-child(2),
+.PaidMediaThumb-module__itemCount2 .PaidMediaThumb-module__count {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.PaidMediaThumb-module__thumb:nth-child(3),
+.PaidMediaThumb-module__itemCount3 .PaidMediaThumb-module__count {
+  grid-row: 3;
+  grid-column: 3;
+}
+
+.PaidMediaThumb-module__blurry, .PaidMediaThumb-module__full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.PaidMediaThumb-module__full {
+  animation: PaidMediaThumb-module__fadeIn 0.2s ease-in-out;
+}
+
+@keyframes PaidMediaThumb-module__fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*!*****************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/modals/stars/transaction/StarsTransactionItem.module.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************/
+.StarsTransactionItem-module__root {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.25rem 0.75rem 0.25rem 0.25rem;
+  border-radius: 0.5rem;
+  cursor: var(--custom-cursor, pointer);
+  transition: background-color 0.25s ease-out;
+}
+.StarsTransactionItem-module__root:hover {
+  background-color: var(--color-chat-hover);
+}
+
+.StarsTransactionItem-module__info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.StarsTransactionItem-module__stars {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 0.25rem;
+}
+
+.StarsTransactionItem-module__amount {
+  font-weight: 500;
+}
+
+.StarsTransactionItem-module__title, .StarsTransactionItem-module__description, .StarsTransactionItem-module__date {
+  margin-bottom: 0;
+}
+
+.StarsTransactionItem-module__title {
+  font-size: 1rem;
+}
+
+.StarsTransactionItem-module__description {
+  font-size: 0.875rem;
+}
+
+.StarsTransactionItem-module__date {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.StarsTransactionItem-module__positive {
+  color: var(--color-success);
+}
+
+.StarsTransactionItem-module__negative {
+  color: var(--color-error);
+}
+
+.StarsTransactionItem-module__preview {
+  position: relative;
+  align-self: flex-start;
+}
+
+.StarsTransactionItem-module__subscriptionStar {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  filter: drop-shadow(1px 1px 0 var(--color-background)) drop-shadow(-1px 1px 0 var(--color-background)) drop-shadow(1px -1px 0 var(--color-background)) drop-shadow(-1px -1px 0 var(--color-background));
+}
+/*!************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/common/PeerBadge.module.scss ***!
+  \************************************************************************************************************************************************************************************************************/
+.PeerBadge-module__root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.PeerBadge-module__top {
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.PeerBadge-module__badge {
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.125rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  padding: 0.25rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: 2px solid var(--color-background);
+  border-radius: 1rem;
+}
+
+.PeerBadge-module__text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+  font-size: 0.875rem;
+  width: 100%;
+  margin-bottom: 0;
+}
+/*!************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/modals/common/TableInfoModal.module.scss ***!
+  \************************************************************************************************************************************************************************************************************************/
+.TableInfoModal-module__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: min(92vh, 40rem) !important;
+  overflow-x: hidden;
+}
+
+.TableInfoModal-module__title {
+  background-color: var(--color-background-secondary);
+}
+
+.TableInfoModal-module__value {
+  background-color: var(--color-background);
+  word-break: break-word;
+  min-width: 2rem;
+}
+
+.TableInfoModal-module__table {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  border-radius: 0.3125rem;
+  border: 1px solid var(--color-borders);
+  background-color: var(--color-borders);
+  gap: 1px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.TableInfoModal-module__noFooter {
+  margin-top: 1.5rem;
+}
+
+.TableInfoModal-module__cell {
+  display: flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  position: relative;
+  min-height: 2.5rem;
+}
+
+.TableInfoModal-module__fullWidth {
+  grid-column: 1/-1;
+}
+
+.TableInfoModal-module__avatar {
+  align-self: center;
+}
+
+.TableInfoModal-module__chatItem {
+  margin: 0;
+  width: fit-content;
+  background-color: var(--color-background);
+  color: var(--color-primary);
+}
+/*!******************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/modals/stars/transaction/StarsTransactionModal.module.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************/
+.StarsTransactionModal-module__modal {
+  z-index: calc(var(--z-modal-low-priority) + 1);
+}
+
+.StarsTransactionModal-module__positive {
+  color: var(--color-success);
+}
+
+.StarsTransactionModal-module__negative {
+  color: var(--color-error);
+}
+
+.StarsTransactionModal-module__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.StarsTransactionModal-module__starsHeader {
+  gap: normal;
+}
+
+.StarsTransactionModal-module__amount {
+  display: flex;
+  gap: 0.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.325;
+}
+
+.StarsTransactionModal-module__title, .StarsTransactionModal-module__description, .StarsTransactionModal-module__amount {
+  margin-bottom: 0;
+}
+
+.StarsTransactionModal-module__title {
+  text-align: center;
+  text-wrap: balance;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0.5rem 0 0.25rem;
+}
+
+.StarsTransactionModal-module__tid {
+  font-family: var(--font-family-monospace);
+  font-size: 0.875rem;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-mask-image: linear-gradient(to left, transparent 1rem, black 3rem);
+          mask-image: linear-gradient(to left, transparent 1rem, black 3rem);
+}
+
+.StarsTransactionModal-module__description {
+  text-align: center;
+}
+
+.StarsTransactionModal-module__footer {
+  text-align: center;
+  margin-block: 0.5rem;
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+}
+
+.StarsTransactionModal-module__starsBackground {
+  position: absolute;
+  height: 8rem;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.StarsTransactionModal-module__copyIcon {
+  position: absolute;
+  right: 0.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-inline-start: 0.25rem;
+  color: var(--color-primary);
+  pointer-events: none;
+}
+
+.StarsTransactionModal-module__mediaPreview {
+  margin-block: 1.5rem 1rem;
+  cursor: var(--custom-cursor, pointer);
+}
+
+.StarsTransactionModal-module__subtitle {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.StarsTransactionModal-module__starGiftSticker {
+  height: 150px;
+  width: 150px;
+  position: relative;
+}
+/*!********************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/modals/stars/subscription/StarsSubscriptionModal.module.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************/
+.StarsSubscriptionModal-module__modal {
+  z-index: calc(var(--z-modal-low-priority) + 1);
+}
+
+.StarsSubscriptionModal-module__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.StarsSubscriptionModal-module__starsHeader {
+  gap: normal;
+}
+
+.StarsSubscriptionModal-module__title, .StarsSubscriptionModal-module__amount {
+  margin-bottom: 0;
+}
+
+.StarsSubscriptionModal-module__title {
+  text-align: center;
+  text-wrap: balance;
+  font-size: 1.75rem;
+  line-height: 1.25;
+}
+
+.StarsSubscriptionModal-module__amount {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--color-text-secondary);
+}
+
+.StarsSubscriptionModal-module__footer {
+  text-align: center;
+  margin-block: 0.5rem;
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+}
+
+.StarsSubscriptionModal-module__starsBackground {
+  position: absolute;
+  height: 8rem;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.StarsSubscriptionModal-module__avatarWrapper {
+  position: relative;
+}
+
+.StarsSubscriptionModal-module__subscriptionStar {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 2rem;
+  z-index: 1;
+  filter: drop-shadow(2px 2px 0 var(--color-background)) drop-shadow(-2px 2px 0 var(--color-background)) drop-shadow(2px -2px 0 var(--color-background)) drop-shadow(-2px -2px 0 var(--color-background));
+}
+
+.StarsSubscriptionModal-module__amountStar {
+  font-size: 1.25rem;
+}
+
+.StarsSubscriptionModal-module__secondary {
+  color: var(--color-text-secondary);
+}
+
+.StarsSubscriptionModal-module__danger {
+  color: var(--color-error);
+}
+/*!**************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/modals/paidReaction/StarSlider.module.scss ***!
+  \**************************************************************************************************************************************************************************************************************************/
+.StarSlider-module__root {
+  --_size: 1.875rem;
+  --progress: 0;
+  position: relative;
+  padding-top: 4rem;
+  overflow-x: hidden;
+}
+.StarSlider-module__root input[type=range] {
+  -webkit-appearance: none;
+  display: block;
+  width: 100%;
+  height: 0.75rem;
+  margin-bottom: 0.5rem;
+  background: transparent;
+}
+.StarSlider-module__root input[type=range]:focus {
+  outline: none;
+}
+.StarSlider-module__root input[type=range]::-ms-track {
+  width: 100%;
+  cursor: var(--custom-cursor, pointer);
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+.StarSlider-module__root input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+.StarSlider-module__root input[type=range]::-moz-range-thumb {
+  -moz-appearance: none;
+}
+.StarSlider-module__root input[type=range]::-webkit-slider-runnable-track {
+  cursor: var(--custom-cursor, pointer);
+}
+.StarSlider-module__root input[type=range]::-moz-range-track, .StarSlider-module__root input[type=range]::-moz-range-progress {
+  cursor: var(--custom-cursor, pointer);
+}
+
+.StarSlider-module__slider {
+  height: var(--_size) !important;
+  margin-bottom: 0 !important;
+  cursor: pointer;
+}
+.StarSlider-module__slider::-webkit-slider-runnable-track {
+  height: var(--_size);
+  border-radius: 1rem;
+  background-color: var(--color-background-secondary);
+}
+.StarSlider-module__slider::-moz-range-track {
+  height: var(--_size);
+  border-radius: 1rem;
+  background-color: var(--color-background-secondary);
+}
+.StarSlider-module__slider::-webkit-slider-thumb {
+  height: var(--_size);
+  width: var(--_size);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+.StarSlider-module__slider::-moz-range-thumb {
+  height: var(--_size);
+  width: var(--_size);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.StarSlider-module__sparkles {
+  left: 0;
+  bottom: 0;
+  height: var(--_size);
+  pointer-events: none;
+  --_width: calc(var(--progress) * 100% - 1rem);
+  -webkit-mask-image: linear-gradient(to right, black var(--_width), transparent calc(var(--_width) + 0.5rem));
+          mask-image: linear-gradient(to right, black var(--_width), transparent calc(var(--_width) + 0.5rem));
+  color: white;
+}
+
+.StarSlider-module__progress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: var(--_size);
+  pointer-events: none;
+  border-radius: 1rem;
+  min-width: var(--_size);
+  width: calc(var(--_size) + var(--progress) * (100% - var(--_size)));
+  background-image: var(--stars-gradient);
+}
+.StarSlider-module__progress::after {
+  content: "";
+  position: absolute;
+  right: 0.125rem;
+  top: 0.125rem;
+  width: 1.625rem;
+  height: 1.625rem;
+  border-radius: 50%;
+  background-color: white;
+  z-index: 1;
+}
+
+.StarSlider-module__floatingBadgeWrapper {
+  --_min-x: 0;
+  --_max-x: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  transform: translateX(clamp(var(--_min-x), var(--_size) / 2 + var(--progress) * (100% - var(--_size)), var(--_max-x)));
+  pointer-events: none;
+}
+
+.StarSlider-module__floatingBadge {
+  --_speed: 0;
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  transform: translate(-50%, -100%);
+}
+
+.StarSlider-module__floatingBadgeText {
+  display: flex;
+  align-items: center;
+  gap: 0.125rem;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  background-image: var(--stars-gradient);
+  line-height: 1;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: white;
+  white-space: nowrap;
+}
+
+.StarSlider-module__floatingBadgeTriangle {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 33%);
+  z-index: -1;
+}
+/*!*********************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/modals/paidReaction/PaidReactionModal.module.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************/
+.PaidReactionModal-module__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.PaidReactionModal-module__title {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  margin-top: 1.25rem;
+}
+
+.PaidReactionModal-module__slider {
+  margin-top: 1.5rem;
+  flex-shrink: 0;
+}
+
+.PaidReactionModal-module__description {
+  margin-bottom: 1.5rem;
+}
+
+.PaidReactionModal-module__title, .PaidReactionModal-module__description {
+  text-align: center;
+}
+
+.PaidReactionModal-module__modalBalance {
+  position: absolute;
+  top: 0.75rem;
+  right: 1.25rem;
+  z-index: 3;
+}
+
+.PaidReactionModal-module__topLabel {
+  background-image: var(--stars-gradient);
+  color: var(--color-white);
+  border-radius: 1rem;
+  padding: 0.25rem 0.75rem;
+}
+
+.PaidReactionModal-module__top {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.PaidReactionModal-module__topBadge {
+  background-image: var(--stars-gradient);
+}
+
+.PaidReactionModal-module__buttonStar {
+  margin-inline-start: 0.25rem;
+}
+
+.PaidReactionModal-module__topPeer {
+  overflow: hidden;
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.PaidReactionModal-module__checkbox {
+  align-self: center;
+  margin-bottom: 1.5rem;
+}
+
+.PaidReactionModal-module__disclaimer {
+  font-size: 0.875rem;
+  align-self: center;
+  color: var(--color-text-secondary);
+  margin-bottom: 0;
+}
+/*!********************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/modals/gift/GiftComposer.module.scss ***!
+  \********************************************************************************************************************************************************************************************************************/
+.GiftComposer-module__root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding-top: 3.5rem;
+}
+
+.GiftComposer-module__header {
+  padding: 0.5rem;
+  padding-left: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.GiftComposer-module__spacer {
+  flex-grow: 1;
+}
+
+.GiftComposer-module__title {
+  margin-inline: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.GiftComposer-module__balance-container {
+  margin-left: auto;
+  align-items: end;
+  display: flex;
+  flex-direction: column;
+}
+
+.GiftComposer-module__balance-caption {
+  font-size: 1rem;
+}
+
+.GiftComposer-module__star-balance {
+  margin-right: 0.1875rem;
+}
+
+.GiftComposer-module__balance {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 500;
+  align-items: center;
+}
+
+.GiftComposer-module__optionsSection {
+  padding: 1rem;
+  padding-bottom: 0.5rem;
+  box-shadow: 0 1px 2px var(--color-default-shadow);
+}
+
+.GiftComposer-module__checkboxTitle {
+  color: var(--color-text);
+  font-size: 1rem;
+  text-transform: initial;
+  margin: 0;
+}
+
+.GiftComposer-module__actionMessageView {
+  display: grid;
+  place-content: center;
+  height: 22.5rem;
+  margin-bottom: 0;
+  position: relative;
+  overflow: hidden;
+  flex: 0 0 auto;
+  background-color: var(--theme-background-color);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+html.theme-light .GiftComposer-module__actionMessageView {
+  background-image: url(chat-bg-br.f34cc96fbfb048812820.png);
+}
+.GiftComposer-module__actionMessageView::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: url(chat-bg-pattern-light.ee148af944f6580293ae.png);
+  background-position: top right;
+  background-size: 510px auto;
+  background-repeat: repeat;
+  mix-blend-mode: overlay;
+}
+html.theme-dark .GiftComposer-module__actionMessageView::before {
+  background-image: url(chat-bg-pattern-dark.ad38368a9e8140d0ac7d.png);
+  mix-blend-mode: unset;
+}
+@media (max-width: 600px) {
+  .GiftComposer-module__actionMessageView::before {
+    bottom: auto;
+    height: calc(var(--vh, 1vh) * 100);
+  }
+}
+
+.GiftComposer-module__messageInput, .GiftComposer-module__limited {
+  margin-bottom: 0.5rem;
+}
+
+.GiftComposer-module__footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  padding-top: 0.5rem;
+  flex-grow: 1;
+  flex-direction: column;
+  background-color: var(--color-background-secondary);
+}
+
+.GiftComposer-module__switcher {
+  margin-bottom: 0 !important;
+}
+
+.GiftComposer-module__description {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+}
+
+.GiftComposer-module__main-button {
+  display: flex;
+  font-weight: var(--font-weight-semibold);
+  font-size: 1rem;
+  height: 3rem;
+}
+
+.GiftComposer-module__star {
+  --color-fill: var(--color-white);
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.1875rem;
+  margin-left: 0.5rem;
+}
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/modals/gift/GiftItem.module.scss ***!
+  \****************************************************************************************************************************************************************************************************************/
+.GiftItem-module__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  flex-basis: 0;
+  min-width: 0;
+  padding: 0.625rem;
+  padding-top: 0;
+  border-radius: 0.625rem;
+  background-color: var(--color-background-secondary);
+  position: relative;
+  cursor: var(--custom-cursor, pointer);
+}
+html.theme-dark .GiftItem-module__container {
+  background-color: var(--color-background);
+}
+.GiftItem-module__container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  border-radius: 0.625rem;
+  background-color: var(--color-hover-overlay);
+  pointer-events: none;
+}
+.GiftItem-module__container:hover::before {
+  opacity: 1;
+}
+
+.GiftItem-module__starGift {
+  padding: 0.875rem;
+  padding-bottom: 0.625rem;
+}
+
+.GiftItem-module__monthsDescription {
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+.GiftItem-module__description {
+  font-size: 0.875rem;
+  line-height: 1;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.GiftItem-module__buy {
+  font-size: 0.6875rem !important;
+  margin-top: 0.625rem;
+  line-height: 1;
+  font-weight: var(--font-weight-semibold) !important;
+}
+
+.GiftItem-module__star {
+  margin-inline-end: 0.125rem;
+  font-size: 0.75rem !important;
+}
+
+.GiftItem-module__amount {
+  margin-top: 0.0625rem;
+}
+/*!****************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/modals/gift/StarGiftCategoryList.module.scss ***!
+  \****************************************************************************************************************************************************************************************************************************/
+.StarGiftCategoryList-module__list {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.0625rem;
+  flex-wrap: nowrap;
+  background-color: var(--color-background);
+  overflow-x: auto;
+  overflow-y: hidden;
+  z-index: 1;
+  font-size: 0.875rem;
+  padding-block: 0.25rem;
+  justify-content: flex-start;
+  margin-left: -0.5rem;
+  padding-left: 0.5rem;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 0.5rem, black calc(100% - 0.5rem), transparent);
+          mask-image: linear-gradient(to right, transparent, black 0.5rem, black calc(100% - 0.5rem), transparent);
+}
+html.theme-dark .StarGiftCategoryList-module__list {
+  background-color: #181818;
+}
+
+.StarGiftCategoryList-module__item-selected,
+.StarGiftCategoryList-module__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  width: auto;
+  padding: 0.375rem 0.75rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  border-radius: 1rem;
+}
+.StarGiftCategoryList-module__item-selected:hover,
+.StarGiftCategoryList-module__item:hover {
+  cursor: pointer;
+  background-color: var(--color-background-secondary-accent);
+}
+
+.StarGiftCategoryList-module__selected-item {
+  background-color: var(--color-background-secondary);
+  color: var(--color-text-secondary);
+}
+
+html.theme-dark .StarGiftCategoryList-module__item-selected:hover,
+html.theme-dark .StarGiftCategoryList-module__item:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+html.theme-dark .StarGiftCategoryList-module__selected-item {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.StarGiftCategoryList-module__star {
+  margin-right: 0.1875rem;
+}
+/*!*****************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/modals/gift/GiftModal.module.scss ***!
+  \*****************************************************************************************************************************************************************************************************************/
+.GiftModal-module__root {
+  z-index: calc(var(--z-modal-low-priority) + 1);
+}
+
+.GiftModal-module__root .modal-content {
+  padding: 0;
+  background-color: var(--color-background);
+}
+html.theme-dark .GiftModal-module__root .modal-content {
+  background-color: #181818;
+}
+
+.GiftModal-module__root .modal-dialog,
+.GiftModal-module__transition,
+.GiftModal-module__content {
+  height: min(92vh, 45rem);
+  max-height: none !important;
+}
+
+.GiftModal-module__root .modal-dialog,
+.GiftModal-module__root .modal-content,
+.GiftModal-module__transition {
+  overflow: hidden;
+}
+
+.GiftModal-module__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.GiftModal-module__main {
+  overflow-y: scroll;
+  height: 100%;
+  padding-bottom: 1rem;
+  padding-inline: 1rem;
+  padding-inline-end: calc(1rem - var(--scrollbar-width));
+}
+
+.GiftModal-module__giftSection {
+  padding: 1.5rem;
+}
+
+.GiftModal-module__section {
+  padding: 0.5rem;
+}
+
+.GiftModal-module__starGiftsContainer,
+.GiftModal-module__premiumGiftsGallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  margin-bottom: 0.75rem;
+}
+
+.GiftModal-module__starGiftsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0rem;
+  padding: 0.125rem;
+  padding-top: 0.75rem;
+}
+
+.GiftModal-module__header {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  border-bottom: 0.0625rem solid var(--color-borders);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 3.5rem;
+  padding: 0.5rem;
+  background: var(--color-background);
+  transition: 0.25s ease-out transform;
+  overflow: hidden;
+}
+
+.GiftModal-module__headerSlide {
+  display: flex;
+  align-items: center;
+}
+
+.GiftModal-module__headerText {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.GiftModal-module__hiddenHeader {
+  transform: translateY(-100%);
+}
+
+.GiftModal-module__commonHeaderText {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-medium);
+  margin: 0 0 0 4.5rem;
+  unicode-bidi: plaintext;
+}
+
+.GiftModal-module__closeButton {
+  position: absolute;
+  top: 0.375rem;
+  left: 0.375rem;
+  z-index: 3;
+}
+
+.GiftModal-module__balance {
+  position: absolute;
+  top: 0.75rem;
+  right: 1.25rem;
+  z-index: 3;
+}
+
+.GiftModal-module__avatars {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  z-index: 1;
+}
+
+.GiftModal-module__logoBackground {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 7rem;
+}
+
+.GiftModal-module__center {
+  text-align: center;
+}
+
+.GiftModal-module__description {
+  text-align: center;
+  line-height: 1.375;
+  margin: 0.25rem 1rem 1rem;
+  max-width: 25rem;
+}
+
+.GiftModal-module__starGiftsDescription {
+  margin-bottom: 0.625rem;
+}
+
+.GiftModal-module__boostIcon {
+  color: var(--color-primary);
+  vertical-align: middle;
+  line-height: 1.5;
+}
+
+.GiftModal-module__optionBottom {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.GiftModal-module__secondaryInfo {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  padding: 0.5rem 1rem;
+}
+
+.GiftModal-module__footer {
+  margin: 0 1.5rem 1rem;
+}
+
+.GiftModal-module__starGiftsTransition {
+  overflow: hidden;
+  min-height: calc(100% - 3.5rem);
+  height: auto;
+}
+/*!*************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/modals/gift/recipient/GiftRecipientPicker.module.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************/
+.GiftRecipientPicker-module__root .modal-content {
+  padding: 0;
+}
+
+.GiftRecipientPicker-module__root .modal-dialog {
+  max-width: 55vh;
+}
+
+.GiftRecipientPicker-module__root .modal-dialog, .GiftRecipientPicker-module__root .modal-content {
+  overflow: hidden;
+}
+
+.GiftRecipientPicker-module__picker {
+  height: 75vh;
+}
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/common/BadgeButton.module.scss ***!
+  \**************************************************************************************************************************************************************************************************************/
+.BadgeButton-module__root {
+  font-size: 0.75rem;
+  line-height: 1;
+  border-radius: 1em;
+  padding: 0.25em 0.5em;
+  background-color: var(--accent-background-active-color);
+  color: var(--accent-color);
+  cursor: var(--custom-cursor, pointer);
+  filter: brightness(1);
+  transition: 150ms filter ease-in;
+}
+.BadgeButton-module__root:hover {
+  filter: brightness(1.1);
+}
+/*!**************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/modals/gift/info/GiftInfoModal.module.scss ***!
+  \**************************************************************************************************************************************************************************************************************************/
+.GiftInfoModal-module__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.GiftInfoModal-module__amount {
+  display: flex;
+  gap: 0.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.325;
+}
+
+.GiftInfoModal-module__title, .GiftInfoModal-module__description, .GiftInfoModal-module__amount {
+  margin-bottom: 0;
+}
+
+.GiftInfoModal-module__soldOut {
+  color: var(--color-error);
+}
+
+.GiftInfoModal-module__description {
+  text-align: center;
+}
+
+.GiftInfoModal-module__footerDescription {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.GiftInfoModal-module__unknown {
+  margin-inline-start: 0.25rem;
+}
+
+.GiftInfoModal-module__giftValue {
+  display: flex;
+  align-items: center;
+  gap: 0.125rem;
+}
+
+/*# sourceMappingURL=BundleStars.8b929cdc4523998a6940.css.map*/
